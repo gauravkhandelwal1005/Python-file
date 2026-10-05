@@ -1,10 +1,10 @@
 class Order:
-    def (self, item, price)
+    def __init__(self, item, price):
     self.item = item
     self.price = price
 
-def get(self, num2):
-    print(self.price > num.price)
+def __gt__(self, num2):
+    return self.price > num2.price
 
 ord1 = Order("Chips", 20)
 ord2 = Order("Tea", 15)
