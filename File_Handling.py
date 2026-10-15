@@ -1,2 +1,2 @@
 f = open("gaurav.txt", "r")
-f.read()
+print(f.read())
