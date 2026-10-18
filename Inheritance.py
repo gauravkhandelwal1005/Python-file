@@ -1,7 +1,7 @@
 class Car:
   @staticmethod
   def start():
-    print("Car is started)
+    print("Car is started")
 
   @staticmethod
   def stop():
@@ -11,12 +11,12 @@ class Toyato(Car):
     def __init__(self, name):
     self.name = name 
 
-c1 = ToyatoCar("Fortuner")
-c2 = ToyatoCar("Innova")
+c1 = Toyato("Fortuner")
+c2 = Toyato("Innova")
 
 print(c1.name)
 print(c2.name)  
-print(car.start())
+Car.start())
     
     
     
