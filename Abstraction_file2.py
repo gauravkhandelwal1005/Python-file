@@ -17,3 +17,17 @@ a = Calculator(4)
 a.square()
 a.cube()
 a.squareroot()
+
+class Meta(type):
+  def __new__(mcls, name, bases, namespace):
+    namespace["value"] = 100
+    return super().__new__(mcls, name, bases, namespace)
+
+class A(metaclass=Meta):
+  value = 10
+
+class B(A):
+  pass
+
+print(A.value, B.value)
+
