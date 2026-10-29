@@ -31,3 +31,20 @@ class B(A):
 
 print(A.value, B.value)
 
+from abc import ABC, abstractmethod
+
+class shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+    
+class Square(shape):
+    def __init__(self, side):
+        self.side = side
+ 
+    def area(self):
+        return self.side * self.side
+
+s = Square(4)
+print(f"Area of square is {(s.area())}")
+
