@@ -1,17 +1,18 @@
 import turtle
-screen = turtle.Screen()
-screen.bgcolor("white")
+turtle.Screen().bgcolor("black")
 t = turtle.Turtle()
-t.speed(0.5)
-
-colors = ["red", "orange", "yellow",
-    "green", "blue", "indigo", "violet"]
-
-for j in range(36):
-    t.color(colors[j % 7])
-    t.left(10)
-    for i in range(5):
-        t.forward(100)
-        t.right(144)
-        
-screen.mainloop()
+t.speed(0)
+t.pensize(2)
+for i in range(30):
+    t.color("darkorange", "gold")
+    t.begin_fill()
+    t.setheading(i * 12)
+    t.circle(300, 60); t.left(120)
+    t.circle(300, 60)
+    t.end_fill()
+t.penup()
+for i in range(800):
+    t.home(); t.left(i * 137.508)
+    t.forward(6.5 * i ** 0.5)
+    v = 0.25 + i / 1400
+    t.dot(15, (v, v / 2.2, 0))
